@@ -1,17 +1,17 @@
 // scoreboard - keep track of how many times X and O has won games
 
-// README - write doc
-
 $(document).ready(function() {
 
   var player = 0;
-  var players = ['X', 'O'];
+  var players = ['<img src="http://cdn.superbwallpapers.com/wallpapers/cartoons/elsa-frozen-25406-400x250.jpg">', 'O'];
+
+  // '<img src="http://cdn.superbwallpapers.com/wallpapers/cartoons/elsa-frozen-25406-400x250.jpg"/>', '<img src="http://kathyssavings.com/wp-content/uploads/2013/08/Frozen-Hula-Olaf.png"/>'
   var squareArray = [];
   var count = 0;
   var gameOver = false;
 
   var restart = function() {
-    $('.square').text("");
+    $('.square').html("");
     count = 0;
     $('#tie').hide();
     $('#winner').hide();

@@ -1,3 +1,7 @@
+body {
+  background-image: url(image/Disney-Frozen-Movie-ice-wallpaper.jpg);
+}
+
 #board {
 margin: 0 auto;
 display: table;
@@ -40,19 +44,27 @@ display: table;
 }
 
 #winner {
-  width: 100px;
-  height: 50px;
-  background-color: red;
+  width: 110px;
+  height: 60px;
   margin: 0 auto;
   display: none;
+}
+
+#winner img {
+  width: 70px;
+  height: 70px;
 }
 
 #tie {
   width: 100px;
   height: 50px;
-  background-color: blue;
   margin: 0 auto;
   display: none;
+}
+
+img{
+  width: 150px;
+  height: 150px;
 }
 
 

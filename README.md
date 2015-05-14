@@ -1,7 +1,7 @@
 # TicTacToe
 
 ## Objectives
-- Use index.html, style.css and tictactoe2.js files to create a working tictactoe game
+- Create and use index.html, style.css and tictactoe2.js files to create a working tictactoe game
 - User stories and how users play
 - Create git repo, commit project at various times to repo
 

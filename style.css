@@ -12,10 +12,12 @@ margin-top: 35px;
 margin: 0 auto;
 display: table;
 padding: 5px;
+font-family: 'Lobster Two', cursive;
+font-size: 25px;
 }
 
 .row {
-background-color: rgb(170, 165, 170);
+background-color: #c0f0f0;
 height: 152px;
 width: 456px;
 }
@@ -29,18 +31,25 @@ height: 150px;
 }
 
 .scoreboard {
-margin: 0 auto;
 display: table;
+font-family: 'Lobster Two', cursive;
+font-size: 20px;
+float: left;
+margin-top: -25em;
+margin-left: 4em;
+padding: 1em;
 }
 
 .xwins {
 margin: 0 auto;
 display: table;
+font-family: 'Lobster Two', cursive;
 }
 
 .owins {
 margin: 0 auto;
 display: table;
+font-family: 'Lobster Two', cursive;
 }
 
 #winner {
@@ -48,6 +57,8 @@ display: table;
   height: 60px;
   margin: 0 auto;
   display: none;
+  font-family: 'Lobster Two', cursive;
+  font-size: 19px;
 }
 
 #winner img {
@@ -60,6 +71,8 @@ display: table;
   height: 50px;
   margin: 0 auto;
   display: none;
+  font-family: 'Lobster Two', cursive;
+  font-size: 20px;
 }
 
 img{
@@ -67,4 +80,12 @@ img{
   height: 150px;
 }
 
-
+#new-game {
+margin-left: 10em;
+background-color: #c0f0f0;
+border-width: initial;
+border-color: #006090;
+color: #006090;
+width: 115px;
+height: 50px;
+}

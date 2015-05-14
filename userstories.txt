@@ -1,8 +1,8 @@
 ## User Story 1: Users should see a tic tac toe board on the main page (HTML/CSS)
 
-## User Story 2: User 1 should be able to click any square on the board and place 'X' in any space they choose (first user to start the game will be player X). (jQuery, javascript)
+## User Story 2: User 1 should be able to click any square on the board and place 'Elsa' in any space they choose (first user to start the game will automatically be player Elsa). (jQuery, javascript)
 
-## User Story 3: Users should be able to alternate turns between X and O. (jQuery)
+## User Story 3: Users should be able to alternate turns between Elsa and Olaf. (jQuery)
 
 ## User Story 4: Users should win if three in a row and game alerts who the winner is (any winning scenario applies)
 

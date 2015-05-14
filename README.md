@@ -2,19 +2,19 @@
 
 ## Objectives
 - Create and use index.html, style.css and tictactoe2.js files to create a working tictactoe game
-- User stories and how users play
+- User stories (userstories.txt file) and how users play
 - Create git repo, commit project at various times to repo
+- Create a firebase link to share game (and include in URL section of Github account)
 
 ## Instructions
 
-1. Open app using link: ***Github repo URL?
-2. Start the game by first player choosing a spot on the board - first player becomes 'X'
-3. Take turns playing until one user wins or until there is a tie game (will be alerted in either case)
-4. Restart game at any time (mid-game, after a tie, or when one player has won) by pressing the 'New Game' button
+1. Start the game by first player choosing a square on the board - first player automatically becomes 'Elsa'
+2. Take turns playing until one user wins or until there is a tie game (will be alerted in either case)
+3. Restart game at any time (mid-game, after a tie, or when one player has won) by pressing the 'Play New Game' button
 
 ## Overview
 
-I was tasked with creating a two player Tic Tac Toe functional game, which allows users to switch turns, restart the game at any point, and keep track of when a user wins in any scenario.
+I was tasked with creating a functional two player Tic Tac Toe game, which allows users to switch turns, restart the game at any point, and keep track of when a user wins in any scenario.
 
 ## Step 1: Create User Stories
 
@@ -34,6 +34,8 @@ Wireframes (drawn on whiteboards)
 - Add my javascript file source and type
 <script src="js/tictactoe2.js" type="text/javascript"></script>
 
+- Add other script tags for things like downloaded fonts
+
 - Create boardgame using div classes and div id's - 3 rows with 3 squares in each row
 
 ## Step 4: Create style.css
@@ -42,7 +44,7 @@ Wireframes (drawn on whiteboards)
 
 ## Step 5: Create tictactoe2.js javascript file with jQuery and javascript code
 
-- Enable $(document).ready(function() {} and place code within {} so the whole document will be read before anything is executed
+- Enable $(document).ready(function() {} and place code within {} - this will load the index.html completely first before running any code inside the ready function
 
 - Declare variables
   var player = 0;
@@ -51,8 +53,10 @@ Wireframes (drawn on whiteboards)
   var count = 0;
   var gameOver = false;
 
-- Create a jQuery function that is called when a user clicks on a square on the gameboard, if the square is empty the function will put the current players variable into the square ('X' or 'O')
-  - Increase the count (keep track of how many squares have been filled in on the gameboard)
+- Create a jQuery function that will find all of the square divs, preparing them for an event handler(an action that can be performed on any of the squares found)
+- When a user clicks on a square on the gameboard, if the square is empty the function will put the current players variable into the square value ('X' or 'O')
+- Increase the count by 1 (keep track of how many squares have been filled in on the gameboard)
+- For each square, push the value into the squareArray and console.log the array (this will display the entire array and show which indexes are filled in with images and which are still empty strings or blank)
 
   $('.square').click(function() {
     squareArray=[];
@@ -67,11 +71,11 @@ Wireframes (drawn on whiteboards)
 
       console.log(squareArray);
 
-- Create a getWinner function which takes two arguments and will evaluate each scenario either player could win the game. Call the getWinner function to display a message when a player wins (or when there is a tie game)
+- Create a getWinner function which takes two arguments and will evaluate each scenario either player could win the game.  Call the getWinner function to display a message when a player wins (or when there is a tie game)
 
 
   var getWinner = function(square, player) {
-    var win;
+    var win = true;
 
     if (square[0] === player && square[1] === player && square[2] === player) {
       win = true;
@@ -83,6 +87,7 @@ Wireframes (drawn on whiteboards)
 
     if (getWinner(squareArray, players[player])) {
 
+        gameOver = true;
         $('#winner').html(players[player] + ' wins!');
         $('#winner').show();
 
@@ -96,6 +101,7 @@ Wireframes (drawn on whiteboards)
     count = 0;
     $('#tie').hide();
     $('#winner').hide();
+    gameOver = false;
   };
 
   $('#new-game').on('click', function() {

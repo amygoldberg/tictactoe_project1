@@ -6,6 +6,8 @@ $(document).ready(function() {
   var squareArray = [];
   var count = 0;
   var gameOver = false;
+  var xWins = 0;
+  var oWins = 0;
 
   var restart = function() {
     $('.square').html("");
@@ -34,6 +36,13 @@ $(document).ready(function() {
 
       if (getWinner(squareArray, players[player])) {
         gameOver = true;
+        if (player === 0) {
+          xWins += 1;
+          $('#x-win-count').html(xWins);
+        } else {
+          oWins += 1;
+          $('#o-win-count').html(oWins);
+        }
         $('#winner').html(players[player] + ' wins!');
         $('#winner').show();
 

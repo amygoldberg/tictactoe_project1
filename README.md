@@ -4,7 +4,7 @@
 - Create and use index.html, style.css and tictactoe2.js files to create a working tictactoe game
 - User stories (userstories.txt file) and how users play
 - Create git repo, commit project at various times to repo
-- Create a firebase link to share game (and include in URL section of Github account)
+- Create a firebase link to share game: https://tictactoe-letitgo.firebaseapp.com
 
 ## Instructions
 
@@ -108,6 +108,26 @@ Wireframes (drawn on whiteboards)
     restart();
   });
 
+- Create a scoreboard to keep track of each players game wins
 
+  - Create X wins and O wins variable
+  - Add if else statement to determine which player won, add a win to their count, and add this into the div
 
+  if (player === 0) {
+          xWins += 1;
+          $('#x-win-count').html(xWins);
+        } else {
+          oWins += 1;
+          $('#o-win-count').html(oWins);
+        }
+
+## Step 6: Create a firebase link
+
+- Create app (tictactoe-letitgo) in firebase account
+- In Terminal, cd into Project folder
+- Initialize firebase in terminal using command firebase init
+  - Enter username and password credentials if asked
+- Once initialized, enter command firebase deploy
+  - This will create a firebase URL
+  - Test and share
 

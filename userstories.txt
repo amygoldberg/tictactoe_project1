@@ -9,3 +9,5 @@
 ## User Story 5: Users should get a tie game notification if no winner (but all 9 spots have been filled in).
 
 ## User Story 6: Users can restart the game using 'New Game' button at the end of a win game, tie game, or at any point throughout the game.
+
+## User Story 7: Users can keep track of their wins, if they play multiple games, in the scoreboard.

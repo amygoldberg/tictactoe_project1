@@ -1,0 +1,9 @@
+## User Story 1: Users should see a tic tac toe board on the main page (HTML/CSS)
+
+## User Story 2: User 1 should be able to click the board and place 'X' in any space they choose (first user to start the game will be player X). (jQuery, javascript)
+
+## User Story 3: Users should be able to alternate turns between X and O. (jQuery)
+
+## User Story 4: Users should win if three in a row and game alerts who the winner is (any winning scenario applies)
+
+## User Story 5: Users should get a tie game notification if no winner (but all 9 spots have been filled in).

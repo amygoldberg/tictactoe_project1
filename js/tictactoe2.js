@@ -2,9 +2,6 @@
 
 // README - write doc
 
-//run jshint on this before turning in
-
-
 $(document).ready(function() {
 
   var player = 0;
@@ -16,6 +13,8 @@ $(document).ready(function() {
   var restart = function() {
     $('.square').text("");
     count = 0;
+    $('#tie').hide();
+    $('#winner').hide();
   };
 
   $('#new-game').on('click', function() {
@@ -30,7 +29,7 @@ $(document).ready(function() {
       count++;
 
       $('.square').each(function() {
-        squareArray.push($(this).html())
+        squareArray.push($(this).html());
       });
 
       console.log(squareArray);
@@ -42,8 +41,8 @@ $(document).ready(function() {
 
       } else if (count === 9) {
         gameOver = true;
-        $('#tie').show();
         $('#tie').html('Tie game!');
+        $('#tie').show();
       }
 
       player = 1 - player;
@@ -51,7 +50,7 @@ $(document).ready(function() {
     }
   });
 
-  function getWinner(square, player) {
+  var getWinner = function(square, player) {
     var win;
 
     if (square[0] === player && square[1] === player && square[2] === player) {
